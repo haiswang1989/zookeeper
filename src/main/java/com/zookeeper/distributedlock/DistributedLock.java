@@ -15,6 +15,10 @@ import com.zookeeper.distributedlock.exception.LockNodeNotExistException;
  * 3：没有获取到锁的,就watcher排在它前面的结点
  * 4: 线程是否锁(删除结点),会notify后置的结点,这样后面的node就会获取到锁
  * 
+ * 该种方式实现分布式锁比单纯的创建目录的方式去实现分布式锁的优点是避免了
+ * "羊群效应",如果集群的规模比较庞大,使用单纯创建目录的方式,在notify阶段
+ * 会影响集群的可用性
+ * 
  * <p>Description:</p>
  * @author hansen.wang
  * @date 2017年9月8日 上午10:45:30
