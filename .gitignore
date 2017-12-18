@@ -1,1 +1,12 @@
-/target/
+**/target/
+**/.settings/
+**/.classpath
+**/.factorypath
+**/.gitignore
+**/.project
+**/test-output/
+.gitignore
+.project
+~$design.docx
+.settings/
+.classpath
